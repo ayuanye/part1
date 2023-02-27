@@ -1,3 +1,4 @@
+// ts时使用webpack打包转化相关的配置文件
 // 引入一个包
 const path = require('path');
 
@@ -18,7 +19,12 @@ module.exports = {
         // 指定打包文件的目录
         path: path.resolve(__dirname,'dist'),
         // 打包后文件的文件
-        filename: "bundle.js"
+        filename: "bundle.js",
+
+        // 告诉webpack不使用箭头
+        environment:{
+            arrowFunction:false
+        }
     },
 
     // 指定webpack打包时要使用的模块
@@ -45,7 +51,8 @@ module.exports = {
                                     {
                                         // 要兼容的目标浏览器
                                         targets:{
-                                            "chrome":"88"
+                                            "chrome":"88",
+                                            "ie":"11"
                                         },
                                         //指定corejs的版本
                                         "corejs":"3" ,
