@@ -12,4 +12,4 @@ console.log('hi');
 let fn = (a, b) => a + b;
 fn(123, 456);
 fn(77, 22);
-console.log(Promise);
+// console.log(Promise);
